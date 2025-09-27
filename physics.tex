@@ -1,0 +1,145 @@
+\documentclass[openany]{book}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{esvect}
+\newcommand{\ihat}{\hat{\textbf{\i}}}
+\newcommand{\jhat}{\hat{\textbf{\j}}}
+\newcommand{\khat}{\hat{\textbf{k}}}
+\title{
+\centering
+\rule{\textwidth}{2pt}
+\break
+{\bfseries\Huge \centering Physics Notes}
+\rule{\textwidth}{2pt}
+}
+\author{
+Smaran Timsina
+}
+\date{September 21, 2025 - Present}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{Preface \& Prerequisites}
+\quad Hi there! I'm making this resource for anyone trying to learn physics whether it be for a class or just for funsies!! This resource is primarily for AP Physics (1/C) level students, as well as those studying for any of the numerous Physics Olympiads. It's also a documentation of my own personal journey. I hope that for whatever purposes you may use this that you are successful and lock in! 
+
+
+For these notes, I'll be using a textbook called {\bfseries\textit{Physics}} by David Halliday, Robert Resnick, Jearl Walker (commonly known as {\bfseries\textit{HRK}} in the Physics Olympiad community). If you'd like to follow along with it or use it on your own, you can find it available to buy through different online stores, like Amazon and Thriftbooks.
+
+
+To understand much of this course, you should be familiar with concepts like trigonometry (right triangle, unit circle, trigonometric functions, trig IDs, laws of sines and cosines, etc.), algebra (graphing functions, solving equations, finding roots of polynomials, complex roots and powers, logarithmic and exponential functions), and optionally, I recommend you have already learned or are learning calculus. I also recommend you have great attention to detail and a good sense of direction!
+
+
+\chapter{Kinematics}
+\section{Introduction}
+\quad This chapter will be about kinematics. Kinematics is the study of motion in physics, as we abstract objects in order to better and more easily understand their motion. In this chapter, I'd recommend having a good understanding of derivatives (rate of change/slope) as well as vector math (literally just some trig and Pythagorean theorem). 
+
+\section{Kinematics with Vectors}
+
+\begin{itemize}
+\item {\bfseries{Vectors}} have both magnitude {\bfseries{and}} \textit{direction}.
+\item {\bfseries{Scalars}} only have magnitude.
+\item {\bfseries{Kinematics}} is the study of {\bfseries{motion}}: position, velocity, and acceleration, in particular.
+\item In this chapter, objects will be treated as {\bfseries{particles}} or {\bfseries{point-objects}}, to ignore internal or rotating motion to just focus on motion along axes.
+\end{itemize}
+
+\section{Properties of Vectors}
+\begin{itemize}
+    \item Graphically, {\bfseries{Arrow}} = {\bfseries{Vector}}
+    \item {\bfseries{Length}} of vector arrow is {\textit{proportional}} to its magnitude, use some scale to define the proportionality (ex. some length on paper is equivalent to this length in reality)
+    \item Vectors can be represented as: $\vec{a}$
+    \item The magnitude of a vector can be represented as: $|\vec{a}|$ or an italicized character, {\textit{a}}
+    \item Now to use vectors to a further capacity, we'll have to use vector components to see how an object, especially one moving along more than one axis moves in a specific component to analyze its motion. For example, in a projectile, its important to analyze horizontal and vertical components separately to understand its motion better as they are independent of one another.
+    \item In 2D Kinematics, we can define the components of a vector using the vector's magnitude, $|\vec{a}|$, and its direction, defined by an angle, $\theta$, relative to some reference point.
+    \item You can define these components mathematically as the following: \break $\vec{a_x}$ = $|\vec{a}|\cos{\theta}$ and $\vec{a_y}$ = $|\vec{a}|\sin{\theta}$
+    \item If you measure $\theta$ to be an angle in the domain [0$^{\circ}$, 90$^{\circ}$] then change the sign of $|\vec{a}|$ to get the correct values of your components, as the sign matters (since its a vector and vectors need a direction, sign = direction), or just use the actual angle as the trigonometric multiplier will cause it to negate if needed.
+    \item If you have other parts of a vector you can get its other parts too. If you have the two components but not the magnitude or direction, you can find magnitude by applying the Pythagorean theorem:
+    \\
+    $|\vec{a}|$ = $\sqrt{\vec{a^{2}_x} + \vec{a^{2}_y}}$
+    \\
+    You can find the direction by applying the inverse tangent function:
+    \\
+    $\tan{\theta} = \frac{\vec{a_y}}{\vec{a_x}} 
+    \Longrightarrow \theta = \tan^{-1}(\frac{\vec{a_y}}{\vec{a_x}})$
+    \item You can also write vectors in terms of unit vectors, indicated by ${\ihat}$ and ${\jhat}$. So instead of writing your vectors in the common notation of defining the magnitude and associating it with the direction its pointing in, you can just write:
+    \\
+    $\vec{a} = \vec{a_x}{\ihat} + \vec{a_y}{\jhat}$
+    \item We can now refer to $\vec{a_x}{\ihat}$ and $\vec{a_y}{\jhat}$ as our vector components
+    \item To add vectors, add the matching components of each, so put the x-components with the x-components and the y-components with the y-components.
+    \item If you multiply a vector by a scalar, it will stretch out or shrink the vector, but it will remain in the same direction unless the scalar is negative, then the direction will be opposite and flipped.
+\end{itemize}
+\section{Position, Velocity, and Acceleration Vectors}
+\begin{itemize}
+    \item Using an xyz coordinate system, we can consider particles moving in three dimension and define the displacement of the object, $\vec{r} = x{\ihat} + y{\jhat} + z{\khat}$
+    \item To find a displacement vector we just subtract one vector from another, which is the same thing as adding opposite (negative) of the second vector to the first one:
+    \\
+    $\Delta\vec{r} = \vec{r_2} - \vec{r_1}$ or
+    $\Delta\vec{r} = \vec{r_f} -\vec{r_0}$
+    \item Average velocity is defined by the displacement over the change in time, or the change in position over the change in time:
+    \\
+    $\vec{v_{avg}} = \frac{\Delta\vec{r}}{\Delta{t}}$, where $\Delta{t} = t_f - t_0$
+    \item Even if you travel far away if you end up where you started your position technically hasn't changed from start to finish. That's why on circular tracks, if you run a lap, your displacement {\bfseries{and}} average velocity are both equal to 0.
+    \item Instantaneous velocity is the velocity at an instant. This is represented as the derivative of the position with respect to time. We can define it with the limit definition of the derivative:
+     
+    \[\vec{v} = \lim_{t\to0} \frac{\Delta\vec{r}}{\Delta t} \]
+
+    We can also define it with the standard definition of the derivative:
+
+    $\vec{v} = \frac{d\vec{r}}{dt}$
+
+    \item And since we've defined the value of $\vec{r}$ we can substitute it into the derivative of the position in respect to time by doing the following:
+    
+    $\vec{v} = \frac{d\vec{r}}{dt} = \frac{d}{dt}(x{\ihat} + y{\jhat} + z{\khat})$
+
+    We can now just take the derivative of each term to get
+
+    $\vec{v} = \frac{dx}{dt}{\ihat} + \frac{dy}{dt}{\jhat} + \frac{dz}{dt}{\khat}$
+
+    \item Additionally, since velocity is also a vector, we can write it in the unit vector notation of a three-dimensional (particle) object's instantaneous velocity to get:
+    
+    $\vec{v} = {\vec{v_x}}{\ihat} + {\vec{v_y}}{\jhat} + {\vec{v_z}}{\khat}$
+
+    If you pay attention you may notice a similarity here between each component of the vector sum of the instantaneous velocity and that of the components of the derivative of the components of the point-object's position. You'll notice that the derivative of each component of the displacement is equal to the matching component of the particle's instantaneous velocity. So, 
+
+    $\vec{v_x} = \frac{dx}{dt}, \qquad \vec{v_y} = \frac{dy}{dt}, \qquad \vec{v_z} = \frac{dz}{dt}$
+
+    \item Instantaneous speed is the magnitude of the instantaneous velocity, $|\vec{v}|$
+    \item Average speed is the total distance traveled over the time elapsed:
+    
+    average speed = $\frac{\text{distance traveled}}{\Delta t}$
+
+    \item Acceleration is the change in velocity over some time, this can mean a number of things, but in general, most of the time, we'll see acceleration in a scenario where an object is slowing down ($\vec{v_f} < \vec{v_0}$), speeding up ($\vec{v_f} > \vec{v_0}$), or changing direction (in 1DK $\Rightarrow$ primarily a change in sign, 2-3DK $\Rightarrow$ change is more ambigous, can usually tell by change in reference angle)
+    \item Average Acceleration can be written as change in velocity over change in time:
+    
+    $\vec{a_{avg}} = \frac{\Delta \vec{v}}{\Delta t}$
+
+    \item Instantaneous acceleration can also be written using derivatives like we did with instantaneous velocity:
+    
+    \[\vec{a} = \lim_{t\to0} \frac{\Delta\vec{v}}{\Delta\vec{t}} \]
+
+
+    \[\vec{a} = \frac{d\vec{v}}{dt} \]
+
+    And using the same logic from earlier, the instantaneous acceleration can be broken into vecotr components, $\vec{a_x}, \vec{a_y}, $ and $\vec{a_z}$. Which can each be defined as the derivative of the instantaneous velocity of the matching component. Therefore,
+
+    \[\vec{a_x} = \frac{d\vec{v_x}}{dt}, \qquad \vec{a_y} = \frac{d\vec{v_y}}{dt}, \qquad \vec{a_z} = \frac{d\vec{v_z}}{dt} \]
+
+\end{itemize}
+    
+    \section{One-Dimensional Kinematicsm, Motion with Constant Acceleration, Freely Falling Bodies}
+    \quad Lowk I'm getting too lazy to write everything because this is pretty rudimentary stuff, just do HRK's exercises to practice your skills. Here are the formulas you have to know for the rest of the unit:
+
+    \begin{itemize}
+        \item $\vec{v_f} = \vec{v_0} + \vec{a}t$
+        \item $\Delta x = \vec{v_0}t + \frac{1}{2}\vec{a}t^{2}$
+        \item $\vec{v_f^{2}} = \vec{v_0^{2}} + 2\vec{a}\Delta x$
+        \item For each vector quantity, remember to make sure that you're using all of them in the same component, as each component is independent of each other. In simpler words, let's say, that you're solving for parts in the vertical motion of an equation, if so, make sure all of your vectors are in the y-component form.
+    \end{itemize}
+
+\chapter{Force and Newton's Laws}
+
+\end{document}
